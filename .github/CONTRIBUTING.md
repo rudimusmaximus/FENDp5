@@ -1,0 +1,1 @@
+This repository follows my evolving DevFlow approach. Individual work for FEND project 5. No collaboration or pull requests expected. Started with standalone repository and added baseline code from course - see commit messages for history.
