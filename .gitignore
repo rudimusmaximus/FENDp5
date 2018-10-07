@@ -1,6 +1,13 @@
 # to keep our linting and atom editor config local
 .editorconfig
+
 .eslintrc
+.eslintrc.js
+.eslintrc.yaml
+.eslintrc.yml
+.eslintrc.json
+.eslintrc
+
 .htmlhintrc
 .stylelintrc
 
