@@ -21,16 +21,17 @@ window.initMap = () => {
 };
 
 /**
- * Get current restaurant from page URL.
+ * @description Get current restaurant from page URL.
+ * @param {function} callback - answer callback
  */
-fetchRestaurantFromURL = (callback) => {
+let fetchRestaurantFromURL = (callback) => {
   if (self.restaurant) { // restaurant already fetched!
     callback(null, self.restaurant);
     return;
   }
   const id = getParameterByName('id');
   if (!id) { // no id found in URL
-    error = 'No restaurant id in URL';
+    let error = 'No restaurant id in URL';
     callback(error, null);
   } else {
     DBHelper.fetchRestaurantById(id, (error, restaurant) => {
@@ -46,9 +47,10 @@ fetchRestaurantFromURL = (callback) => {
 };
 
 /**
- * Create restaurant HTML and add it to the webpage
+ * @description Create restaurant HTML and add it to the webpage
+ * @param {object} restaurant - custom restaurant object //TODO: confirm type
  */
-fillRestaurantHTML = (restaurant = self.restaurant) => {
+let fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
@@ -71,9 +73,12 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 };
 
 /**
- * Create restaurant operating hours HTML table and add it to the webpage.
+ * @description Create restaurant operating hours HTML table and add it to
+ * the webpage.
+ * @param {object} operatingHours - //TODO review type
  */
-fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
+let fillRestaurantHoursHTML = (operatingHours = self
+    .restaurant.operating_hours) => {
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
@@ -91,9 +96,10 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 };
 
 /**
- * Create all reviews HTML and add them to the webpage.
+ * @description Create all reviews HTML and add them to the webpage.
+ * @param {object} reviews - custom reviews object //TODO: confirm type
  */
-fillReviewsHTML = (reviews = self.restaurant.reviews) => {
+let fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
@@ -113,9 +119,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 };
 
 /**
- * Create review HTML and add it to the webpage.
+ * @description Create review HTML and add it to the webpage.
+ * @param {object} review - single review custom object
+ * @return {object} li - element
  */
-createReviewHTML = (review) => {
+let createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
@@ -137,9 +145,10 @@ createReviewHTML = (review) => {
 };
 
 /**
- * Add restaurant name to the breadcrumb navigation menu
+ * @description Add restaurant name to the breadcrumb navigation menu
+ * @param {object} restaurant - custom restaurant object //TODO: confirm type
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+let fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
@@ -147,9 +156,12 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
 };
 
 /**
- * Get a parameter by name from page URL.
+ * @description Get a parameter by name from page URL.
+ * @param {string} name - name of paramater
+ * @param {string} url - url from which to extract name
+ * @return {null} returns null as 'null' or ''
  */
-getParameterByName = (name, url) => {
+let getParameterByName = (name, url) => {
   if (!url) {
     url = window.location.href;
   }
