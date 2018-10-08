@@ -4,22 +4,23 @@ An Udacity FEND Nanodegree repository. Restaurant Reviews App-Stage 1. In this r
 
 # My Notes Completing This
 
+## Important Starting Code Note
+ - Merged readme and starter code from https://github.com/udacity/mws-restaurant-stage-1/commit/bac05e5709556f29ecad764742fe377b32ba71e7 after seting up my DevFlow.
+
 ## Lessons learned:  
 
 | Area | Comments |
 | :--- | :--- |
 | 1. @ CODEOWNERS files | a. Is this a best practice or standard. Review when time allows. See assumptions. |
-| 2. TODO | a. TODO b. TODO |
-| 3. TODO | a. TODO b. TODO |
-
-## Important Starting Code Note
- - Merged readme and starter code from https://github.com/udacity/mws-restaurant-stage-1/commit/bac05e5709556f29ecad764742fe377b32ba71e7 after seting up my DevFlow.
+| 2. CSS to SCSS | a. followed course example to create scss from css b. Read [this article](https://www.hongkiat.com/blog/convert-css-to-sass/) about converting old css to learn scss. Used [this tool](http://css2sass.herokuapp.com/) to do so with our given css. I was able to learn the better layout of sass in a scss file. Replaced my scss with this file and tested to make sure worked as before. Continuing from this point with edits to the sass first. Nothing fancy, just getting used to it and keeping the css generation via gulp.  |
+| 3. .eslintrc | a. Research deprecation of this file and which of the several that can be used in it's stead. b. See https://eslint.org/docs/user-guide/configuring#using-configuration-files-1 |
+| 4. TODO | a. TODO b. TODO |
 
 ## Assumptions required to solve the problem
 The following assumptions were made by evaluating the code and all given instructions:
- - most of our solution can be done in TODO
-
  - ES6 is OK to use without transpiling with Babel
+ 
+ - Not required to build minified/compressed production files
 
  - There was an "@ CODEOWNERS" file that contained the following in the starter code "* @forbiddenvoid @richardkalehoff @asparr". The file was not included in thist repo but credit listed here. Assumption is that it is Udacity team for repo as part of FEND Program.
 
@@ -30,13 +31,15 @@ At key steps in the work completion, I create a release branch that is merged in
 
 I used Atom and GitKraken with a Chrome browser for testing. I copied my preferred label scheme into my repository from my other repositories using [Github Label Manager](https://www.dorukdestan.com/github-label-manager/).
 
-TODO: gulp was used  as follows: //TODO: get the linting and live serving working and review/consider sass and jasmine based on provided code and/or project rubric.
+Gulp was used to get the linting and live serving working and start learning sass via scss file. Jasmine was not used for this project.
 
-See develop branch for commit history with git commit style followed. Releases made to master and develop with tags on master following [Semantic Versioning 2.0.0](https://semver.org/).
+See develop branch for commit history with git commit style followed. Releases made to master and develop with tags on master following [Semantic Versioning 2.0.0](https://semver.org/). Additionally, I'm updating my package.json with my semantic version used in my master branch release tagging scheme as well.
 
 ## Resources used to complete this work
-I read [TODO]().
-I watched [TODO]().
+See lessons learned nuber two above for scss tool for converting given css to scss.
+
+I read [This to learn configuration of eslint](https://eslint.org/docs/user-guide/configuring) and used rules to get my code working and then to complete linting in rounds.
+I watched [Project 1 MWS Webinar with Doug Brown](https://www.youtube.com/watch?v=92dtrNU1GQc).
 
 # Udacity README.md from starter code (google maps branch)  
 
