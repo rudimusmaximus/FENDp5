@@ -1,0 +1,22 @@
+#map {
+  height: 200px;
+  width: 100%;
+  background-color: #ccc; }
+
+#maincontent {
+  max-width: 100%; }
+
+#breadcrumb {
+  max-width: 100%; }
+
+#restaurant-container {
+  max-width: 100%;
+  height: auto; }
+
+#map-container {
+  max-width: 100%;
+  height: auto; }
+
+#reviews-container {
+  max-width: 100%;
+  height: auto; }
