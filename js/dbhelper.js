@@ -1,3 +1,7 @@
+const isProductionEnv = true;// true when published to github.io
+// don't prefix when working locally
+const devProdPrefix = isProductionEnv ? '/FENDp5/' : '';
+
 /**
  * Common database helper functions.
  */
@@ -5,11 +9,16 @@ class DBHelper {
   /**
    * Database URL.
    * Change this to restaurants.json file location on your server.
+   * Based on global env variable, sets so will work locally in our dev
+   * environment or in github.io page environment
    */
   static get DATABASE_URL() {
-    return 'https://rudimusmaximus.github.io/FENDp5/data/restaurants.json';
-    // const port = 3000; // Change this to your server port
-    // return `http://localhost:${port}/data/restaurants.json`;
+    if (isProductionEnv) {
+      return 'https://rudimusmaximus.github.io/FENDp5/data/restaurants.json';
+    } else {
+      const port = 3000; // Change this to your server port
+      return `http://localhost:${port}/data/restaurants.json`;
+    }
   }
 
   /**
@@ -166,7 +175,7 @@ class DBHelper {
    * @return {string} url
    */
   static urlForRestaurant(restaurant) {
-    return (`./restaurant.html?id=${restaurant.id}`);
+    return (devProdPrefix+`./restaurant.html?id=${restaurant.id}`);
   }
 
   /**
@@ -175,7 +184,7 @@ class DBHelper {
    * @return {string} string for location of image
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (devProdPrefix+`/img/${restaurant.photograph}`);
   }
 
   /**
