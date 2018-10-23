@@ -1,4 +1,4 @@
-const isProductionEnv = isProductionEnv || true;// default to production
+let isProductionEnv = isProductionEnv || true;// default to production
 const serviceWorkerLocation = isProductionEnv ?
 'https://rudimusmaximus.github.io/FENDp5/sw_primed_site_caching.js' :
 '../sw_primed_site_caching.js';
