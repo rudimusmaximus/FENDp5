@@ -1,4 +1,4 @@
-const isProductionEnv = true;// true when published to github.io
+let isProductionEnv = true;// true when published to github.io
 // don't prefix when working locally
 const devProdPrefix = isProductionEnv ? '/FENDp5/' : '';
 
