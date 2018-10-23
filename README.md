@@ -40,6 +40,9 @@ See lessons learned nuber two above for scss tool for converting given css to sc
 
 I read [This to learn configuration of eslint](https://eslint.org/docs/user-guide/configuring) and used rules to get my code working and then to complete linting in rounds.
 I watched [Project 1 MWS Webinar with Doug Brown](https://www.youtube.com/watch?v=92dtrNU1GQc).
+I watched the following video and reviewed the following site and article for the page caching approach as follows:  
+[Service worker component fundamentals by Google](https://developers.google.com/web/fundamentals/primers/service-workers/), [TraversyMedia's approach](https://www.youtube.com/watch?v=ksXwaWHCW6k), and [Matthew Cranford's restaurant reviews app](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/).  
+
 
 # Udacity README.md from starter code (google maps branch)  
 
