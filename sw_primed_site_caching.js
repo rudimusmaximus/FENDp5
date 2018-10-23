@@ -21,7 +21,7 @@ const initialCacheFiles = [
   '/img/9.jpg',
   '/img/10.jpg'];
 
-const cacheName = 'v17';
+const cacheName = 'v1';
 
 // Call Install Event
 self.addEventListener('install', (e) => {
