@@ -11,6 +11,7 @@ gulp.task('default', ['styles', 'lint'], function() {
 
   browserSync.init({
     server: './',
+    // https: true,
   });
 });
 

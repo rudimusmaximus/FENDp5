@@ -1,6 +1,6 @@
 {
   "name": "FENDp5",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "**Static to responsive & accessible**   An Udacity FEND Nanodegree repository. Restaurant Reviews App-Stage 1. In this real world case study, given the front end code for a static Restaurant Reviews App, revise the site to be responsive and achieve accessibility standards.",
   "main": "index.js",
   "scripts": {
