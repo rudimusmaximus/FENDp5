@@ -1,6 +1,7 @@
 const isProductionEnv = true;// true when published to github.io
-// don't prefix when working locally
-const devProdPrefix = isProductionEnv ? '/FENDp5/' : '';
+// prefix with current directory when working locally
+// prefix with repo name when in hosted production ghpages io
+const devProdPrefix = isProductionEnv ? '/FENDp5/' : '.';
 
 /**
  * Common database helper functions.
@@ -175,7 +176,7 @@ class DBHelper {
    * @return {string} url
    */
   static urlForRestaurant(restaurant) {
-    return (devProdPrefix+`./restaurant.html?id=${restaurant.id}`);
+    return (devProdPrefix+`/restaurant.html?id=${restaurant.id}`);
   }
 
   /**

@@ -14,7 +14,10 @@ An Udacity FEND Nanodegree repository. Restaurant Reviews App-Stage 1. In this r
 | 1. @ CODEOWNERS files | a. Is this a best practice or standard. Review when time allows. See assumptions. |
 | 2. CSS to SCSS | a. followed course example to create scss from css b. Read [this article](https://www.hongkiat.com/blog/convert-css-to-sass/) about converting old css to learn scss. Used [this tool](http://css2sass.herokuapp.com/) to do so with our given css. I was able to learn the better layout of sass in a scss file. Replaced my scss with this file and tested to make sure worked as before. Continuing from this point with edits to the sass first. Nothing fancy, just getting used to it and keeping the css generation via gulp.  |
 | 3. .eslintrc | a. Research deprecation of this file and which of the several that can be used in it's stead. b. See https://eslint.org/docs/user-guide/configuring#using-configuration-files-1 |
-| 4. TODO | a. TODO b. TODO |
+| 4. cross platform dev | a. in order to develop on Ubuntu 16.04LTS and MacOS, i replicated our .bashrc terminal setup for bash shell; also, learned mvn to manage node and npm; successfully made changes between the two including command line linting to google standards, sass generation of css, and browser sync for live editing and testing especially of service worker; for NVM see [how to manage node js sudo free](https://www.nearform.com/blog/how-to-manage-node-js-sudo-free-with-nvm/) found after MUCH research and trial and error.<br>b. One's dev environment should be as similar to production as possible; locally, I work in http and in production, work is hosted on github pages using https. TODO: in the future setup local to have https as well.<br>C. GitHub pages root directory is NOT the repo name, so we needed to create a solution to manage the links with a 'devProdPrefix' based on true false for in production status variable. This is working locallay in both Mac and Linux. Will test on ghPages.<br>D. Chromebooks: used [crouton](https://github.com/dnschneid/crouton) to create 'chroot' (**Chromium OS Universal Chroot Environment**) with xenial Ubuntu for our linux dev stack same as our macOS stack. :) This works smashingly well! The chromebook remains fully functional and gets updates without the need for a dual boot solution. In future, a chromebook that supports linux apps should make this unnecessary as it is less secure without OS verification. However, low cost and stable. |
+| 5. TODO | a. TODO b. TODO |
+| 6. TODO | a. TODO b. TODO |
+| . TODO | a. TODO b. TODO |
 
 ## Assumptions required to solve the problem
 The following assumptions were made by evaluating the code and all given instructions:
@@ -27,7 +30,7 @@ The following assumptions were made by evaluating the code and all given instruc
 ## Work Flow
 I followed git commit guidelines, a 'Git Flow' branching model committing into feature branches that are merged into develop until ready to test with GitHub the repository of truth. The repo was built from scratch with a copy of the baseline code added to my standalone repo - this allows for demonstration of issue template and for later experiments after the course. 
 
-At key steps in the work completion, I create a release branch that is merged into develop and master with a semantic version tag on the master branch following 
+At key steps in the work completion, I create a release branch that is merged into both develop and master with a semantic version tag on the master branch following the example in my [DevFlow Repo](https://github.com/rudimusmaximus/DevFlow)
 
 I used Atom and GitKraken with a Chrome browser for testing. I copied my preferred label scheme into my repository from my other repositories using [Github Label Manager](https://www.dorukdestan.com/github-label-manager/).
 
@@ -42,6 +45,7 @@ I read [This to learn configuration of eslint](https://eslint.org/docs/user-guid
 I watched [Project 1 MWS Webinar with Doug Brown](https://www.youtube.com/watch?v=92dtrNU1GQc).
 I watched the following video and reviewed the following site and article for the page caching approach as follows:  
 [Service worker component fundamentals by Google](https://developers.google.com/web/fundamentals/primers/service-workers/), [TraversyMedia's approach](https://www.youtube.com/watch?v=ksXwaWHCW6k), and [Matthew Cranford's restaurant reviews app](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/).  
+Also, [M.C.'s review on accessiblity for this project]().  
 
 
 # Udacity README.md from starter code (google maps branch)  
