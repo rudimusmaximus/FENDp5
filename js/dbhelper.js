@@ -1,5 +1,6 @@
-const isProductionEnv = false;// true when published to github.io
-// don't prefix when working locally
+const isProductionEnv = true;// true when published to github.io
+// prefix with current directory when working locally
+// prefix with repo name when in hosted production ghpages io
 const devProdPrefix = isProductionEnv ? '/FENDp5/' : '.';
 
 /**
