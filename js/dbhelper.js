@@ -171,7 +171,7 @@ class DBHelper {
    * @return {string} url
    */
   static urlForRestaurant(restaurant) {
-    return (devProdPrefix+`restaurant.html?id=${restaurant.id}`);
+    return (RR$.Enums.DEV_PROD_PREFIX+`restaurant.html?id=${restaurant.id}`);
   }
 
   /**
@@ -180,7 +180,7 @@ class DBHelper {
    * @return {string} string for location of image
    */
   static imageUrlForRestaurant(restaurant) {
-    return (devProdPrefix+`img/${restaurant.photograph}`);
+    return (RR$.Enums.DEV_PROD_PREFIX+`img/${restaurant.photograph}`);
   }
 
   /**
