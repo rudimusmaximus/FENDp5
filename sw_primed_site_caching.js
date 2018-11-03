@@ -1,5 +1,5 @@
 // DODO: the global variables are not available to this so re-declare, research
-const swFromProductionEnv = false;// true when published to github.io
+const swFromProductionEnv = true;// true when published to github.io
 // prefix with current directory when working locally
 // prefix with repo name when in hosted production ghpages io
 const swDevProdPrefix = swFromProductionEnv ?
