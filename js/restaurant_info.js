@@ -5,7 +5,7 @@ let map;
  * on doc load set the home links based on environment
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  setHomeLinks();
+  setHomeLinks(devProdPrefix);
 });
 
 /**
@@ -191,14 +191,15 @@ let getParameterByName = (name, url) => {
 /**
  * @description sets any home-links to appropriate link address
  * relies on devProdPrefix being set based on production true
- * dev false. see dbhelper.js
+ * dev false. see js/deployment.js
+ * @param {string} devProdPrefix - global environment var set in deployment.js
  */
-let setHomeLinks = () => {
+let setHomeLinks = (devProdPrefix) => {
   let homeLinks = document.querySelectorAll('.home-link');
   // set correct homeLinks
   Array.from(homeLinks).map(
       ()=>{
-        this.href = devProdPrefix + this.href;
+        this.href = devProdPrefix;
       }
   );
 };
