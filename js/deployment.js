@@ -1,5 +1,5 @@
-// Set Global object via IIFE; note, this pattern requires var
-let RR$ = {
+// Set Global object
+const RR$ = {
   description: `Restaurant Review namespace as a global object`,
   Enums: {
     // set to true when published/deployed to github environment

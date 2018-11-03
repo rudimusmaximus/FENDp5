@@ -1,4 +1,4 @@
-const serviceWorkerLocation = isProductionEnv ?
+const serviceWorkerLocation = RR$.Enums.IS_PRODUCTION_INDICATOR ?
 'https://rudimusmaximus.github.io/FENDp5/sw_primed_site_caching.js' :
 '../sw_primed_site_caching.js';
 

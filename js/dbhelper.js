@@ -9,7 +9,7 @@ class DBHelper {
    * environment or in github.io page environment
    */
   static get DATABASE_URL() {
-    if (isProductionEnv) {
+    if (RR$.Enums.IS_PRODUCTION_INDICATOR) {
       return 'https://rudimusmaximus.github.io/FENDp5/data/restaurants.json';
     } else {
       const port = 3000; // Change this to your server port
