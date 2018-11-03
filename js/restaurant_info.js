@@ -5,7 +5,7 @@ let map;
  * on doc load set the home links based on environment
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  setHomeLinks(RR$.Enums.DEV_PROD_PREFIX);
+  setHomeLinks(RR$);
 });
 
 /**
