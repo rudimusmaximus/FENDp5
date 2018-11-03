@@ -1,8 +1,3 @@
-const isProductionEnv = true;// true when published to github.io
-// prefix with current directory when working locally
-// prefix with repo name when in hosted production ghpages io
-const devProdPrefix = isProductionEnv ? '/FENDp5/' : '.';
-
 /**
  * Common database helper functions.
  */
@@ -176,7 +171,7 @@ class DBHelper {
    * @return {string} url
    */
   static urlForRestaurant(restaurant) {
-    return (devProdPrefix+`/restaurant.html?id=${restaurant.id}`);
+    return (devProdPrefix+`restaurant.html?id=${restaurant.id}`);
   }
 
   /**
@@ -185,7 +180,7 @@ class DBHelper {
    * @return {string} string for location of image
    */
   static imageUrlForRestaurant(restaurant) {
-    return (devProdPrefix+`/img/${restaurant.photograph}`);
+    return (devProdPrefix+`img/${restaurant.photograph}`);
   }
 
   /**
