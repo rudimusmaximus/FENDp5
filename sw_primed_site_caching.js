@@ -1,9 +1,9 @@
 // DODO: the global variables are not available to this so re-declare, research
-const swFromProductionEnv = true;// true when published to github.io
-// prefix with current directory when working locally
-// prefix with repo name when in hosted production ghpages io
+// See RR$ in deployment for mirrored logic
+// Must stay in sync to Enums in deployment.js
+const swFromProductionEnv = true;
 const swDevProdPrefix = swFromProductionEnv ?
-'https://rudimusmaximus.github.io/FENDp5/' : '/';
+  'https://rudimusmaximus.github.io/FENDp5/' : '/';
 
 // see readme.md for source attributions for service work cache approaches
 const initialCacheFiles = [
@@ -30,27 +30,10 @@ const initialCacheFiles = [
 
 const cacheName = 'v1';
 
-// /**
-//  * @description sets appropriate link address for initial cache load
-//  * relies on swDevProdPrefix being set based on production true
-//  * dev false. see js/deployment.js
-//  * @param {string} prefix - global environment var set in deployment.js
-//  * @param {array} list - initial list of files for cache
-//  */
-// let setInitialCacheFiles = (prefix, list) => {
-//   list.map(
-//       (item)=>{
-//         item = swDevProdPrefix + item;
-//       }
-//   );
-// };
-// // prefix file location properly
-// setInitialCacheFiles(swDevProdPrefix, initialCacheFiles);
-
 // Call Install Event
 self.addEventListener('install', (e) => {
-  console.log(`Service Worker: Installed. Priming cache with:
-    ${initialCacheFiles}.`);
+  console.log(
+      `Service Worker: Installed. Priming cache from initial files array.`);
   e.waitUntil(
       caches.open(cacheName).then((cache) => cache.addAll(initialCacheFiles))
   );

@@ -5,7 +5,7 @@ let map;
  * on doc load set the home links based on environment
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  setHomeLinks(devProdPrefix);
+  setHomeLinks(RR$.Enums.DEV_PROD_PREFIX);
 });
 
 /**
@@ -190,16 +190,16 @@ let getParameterByName = (name, url) => {
 // setup prod or dev based home homeLinks
 /**
  * @description sets any home-links to appropriate link address
- * relies on devProdPrefix being set based on production true
+ * relies on RR$.Enums.DEV_PROD_PREFIX being set based on production true
  * dev false. see js/deployment.js
- * @param {string} devProdPrefix - global environment var set in deployment.js
+ * @param {object} RR$ - global var set in deployment.js
  */
-let setHomeLinks = (devProdPrefix) => {
+let setHomeLinks = (RR$) => {
   let homeLinks = document.querySelectorAll('.home-link');
   // set correct homeLinks
   Array.from(homeLinks).map(
       ()=>{
-        this.href = devProdPrefix;
+        this.href = RR$.Enums.DEV_PROD_PREFIX;
       }
   );
 };
