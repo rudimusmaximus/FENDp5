@@ -6,11 +6,29 @@ let markers = [];
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ * Set the home links based on environment
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   fetchNeighborhoods();
   fetchCuisines();
+  setHomeLinks(RR$.Enums.DEV_PROD_PREFIX);
 });
+
+/**
+ * @description setup prod or dev based home homeLinks. sets any home-links to
+ * appropriate link address relies on RR$.Enums.DEV_PROD_PREFIX being set
+ * based on production true dev false. see js/deployment.js
+ * @param {string} prefix - expected from global var set in deployment.js
+ */
+let setHomeLinks = (prefix) => {
+  let homeLinks = document.querySelectorAll('.home-link');
+  // set correct homeLinks
+  Array.from(homeLinks).map(
+      (oneHomeLink)=>{
+        oneHomeLink.href = prefix;
+      }
+  );
+};
 
 /**
  * @description Fetch all neighborhoods and set their HTML.
