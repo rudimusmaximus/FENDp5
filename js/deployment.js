@@ -1,5 +1,5 @@
 // Add to Global object, a namespace object for our use
-window.RR$ = {
+Window.RR$ = {
   description: `Restaurant Review namespace as a global object`,
   Enums: {
     // set to true when published/deployed to github environment
@@ -22,7 +22,7 @@ window.RR$ = {
  * @param {object} RR$ - the restaurant reviews namespace
  * @return {string} required link prefix
  */
-window.RR$.Enums.DEV_PROD_PREFIX = (function(RR$) {
-  return (window.RR$.Enums.IS_PRODUCTION_INDICATOR ?
-    window.RR$.Enums.GITHUB_HOSTED_ROOT : window.RR$.Enums.LOCAL_ROOT);
-})(RR$);
+Window.RR$.Enums.DEV_PROD_PREFIX = (function(RR$) {
+  return (Window.RR$.Enums.IS_PRODUCTION_INDICATOR ?
+    Window.RR$.Enums.GITHUB_HOSTED_ROOT : Window.RR$.Enums.LOCAL_ROOT);
+})(Window.RR$);

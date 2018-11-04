@@ -5,7 +5,7 @@ let map;
  * on doc load set the home links based on environment
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  setHomeLinks(window.RR$.Enums.DEV_PROD_PREFIX);
+  setHomeLinks(Window.RR$.Enums.DEV_PROD_PREFIX);
 });
 
 /**
@@ -190,7 +190,7 @@ let getParameterByName = (name, url) => {
 // setup prod or dev based home homeLinks
 /**
  * @description sets any home-links to appropriate link address
- * relies on window.RR$.Enums.DEV_PROD_PREFIX being set based on production true
+ * relies on Window.RR$.Enums.DEV_PROD_PREFIX being set based on production true
  * dev false. see js/deployment.js
  * @param {string} prefix - expected from global var set in deployment.js
  */
