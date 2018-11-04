@@ -9,7 +9,7 @@ class DBHelper {
    * environment or in github.io page environment
    */
   static get DATABASE_URL() {
-    if (window.RR$.Enums.IS_PRODUCTION_INDICATOR) {
+    if (Window.RR$.Enums.IS_PRODUCTION_INDICATOR) {
       return 'https://rudimusmaximus.github.io/FENDp5/data/restaurants.json';
     } else {
       const port = 3000; // Change this to your server port
@@ -171,7 +171,7 @@ class DBHelper {
    * @return {string} url
    */
   static urlForRestaurant(restaurant) {
-    return (window.RR$.Enums.DEV_PROD_PREFIX+
+    return (Window.RR$.Enums.DEV_PROD_PREFIX+
       `restaurant.html?id=${restaurant.id}`);
   }
 
@@ -181,7 +181,7 @@ class DBHelper {
    * @return {string} string for location of image
    */
   static imageUrlForRestaurant(restaurant) {
-    return (window.RR$.Enums.DEV_PROD_PREFIX+`img/${restaurant.photograph}`);
+    return (Window.RR$.Enums.DEV_PROD_PREFIX+`img/${restaurant.photograph}`);
   }
 
   /**
