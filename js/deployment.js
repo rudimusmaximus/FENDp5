@@ -4,6 +4,7 @@ window.RR$ = {
   Enums: {
     // set to true when published/deployed to github environment
     // keep in sync with sw_primed_site_caching.js
+    // and with swregistration.js set of var as well
     IS_PRODUCTION_INDICATOR: true,
 
     GITHUB_HOSTED_ROOT: 'https://rudimusmaximus.github.io/FENDp5/',
