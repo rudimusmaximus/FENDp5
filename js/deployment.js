@@ -1,10 +1,10 @@
-// Set Global object
-const RR$ = {
+// Add to Global object, a namespace object for our use
+window.RR$ = {
   description: `Restaurant Review namespace as a global object`,
   Enums: {
     // set to true when published/deployed to github environment
     // keep in sync with sw_primed_site_caching.js
-    IS_PRODUCTION_INDICATOR: false,
+    IS_PRODUCTION_INDICATOR: true,
 
     GITHUB_HOSTED_ROOT: 'https://rudimusmaximus.github.io/FENDp5/',
     LOCAL_ROOT: '/',
@@ -21,7 +21,7 @@ const RR$ = {
  * @param {object} RR$ - the restaurant reviews namespace
  * @return {string} required link prefix
  */
-RR$.Enums.DEV_PROD_PREFIX = (function(RR$) {
-  return (RR$.Enums.IS_PRODUCTION_INDICATOR ?
-    RR$.Enums.GITHUB_HOSTED_ROOT : RR$.Enums.LOCAL_ROOT);
+window.RR$.Enums.DEV_PROD_PREFIX = (function(RR$) {
+  return (window.RR$.Enums.IS_PRODUCTION_INDICATOR ?
+    window.RR$.Enums.GITHUB_HOSTED_ROOT : window.RR$.Enums.LOCAL_ROOT);
 })(RR$);

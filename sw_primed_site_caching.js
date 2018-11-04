@@ -1,7 +1,7 @@
-// DODO: the global variables are not available to this so re-declare, research
+// The global variables are not available to this so re-declare,
 // See RR$ in deployment for mirrored logic
 // Must stay in sync to Enums in deployment.js
-const swFromProductionEnv = false;
+const swFromProductionEnv = true;
 const swDevProdPrefix = swFromProductionEnv ?
   'https://rudimusmaximus.github.io/FENDp5/' : '/';
 
