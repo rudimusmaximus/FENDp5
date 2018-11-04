@@ -9,6 +9,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /**
+ * @description setup prod or dev based home homeLinks. sets any home-links to
+ * appropriate link address relies on RR$.Enums.DEV_PROD_PREFIX being set
+ * based on production true dev false. see js/deployment.js
+ * @param {string} prefix - expected from global var set in deployment.js
+ */
+let setHomeLinks = (prefix) => {
+  let homeLinks = document.querySelectorAll('.home-link');
+  // set correct homeLinks
+  Array.from(homeLinks).map(
+      (oneHomeLink)=>{
+        oneHomeLink.href = prefix;
+      }
+  );
+};
+
+/**
  * Initialize Google map, called from HTML.
  */
 window.initMap = () => {
@@ -185,21 +201,4 @@ let getParameterByName = (name, url) => {
     return '';
   }
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
-};
-
-// setup prod or dev based home homeLinks
-/**
- * @description sets any home-links to appropriate link address
- * relies on RR$.Enums.DEV_PROD_PREFIX being set based on production true
- * dev false. see js/deployment.js
- * @param {string} prefix - expected from global var set in deployment.js
- */
-let setHomeLinks = (prefix) => {
-  let homeLinks = document.querySelectorAll('.home-link');
-  // set correct homeLinks
-  Array.from(homeLinks).map(
-      ()=>{
-        this.href = prefix;
-      }
-  );
 };
