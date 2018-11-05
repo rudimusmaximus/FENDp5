@@ -2,6 +2,9 @@
 **Static to responsive & accessible**  
 An Udacity FEND Nanodegree repository. Restaurant Reviews App-Stage 1. In this real world case study, given the front end code for a static Restaurant Reviews App, revise the site to be responsive and achieve accessibility standards.
 
+# How to Test My Submission
+Just click [here to try it running on GitHub Pages](https://rudimusmaximus.github.io/FENDp5/).
+
 # My Notes Completing This
 
 ## Important Starting Code Note
@@ -15,10 +18,8 @@ An Udacity FEND Nanodegree repository. Restaurant Reviews App-Stage 1. In this r
 | 2. CSS to SCSS | a. followed course example to create scss from css b. Read [this article](https://www.hongkiat.com/blog/convert-css-to-sass/) about converting old css to learn scss. Used [this tool](http://css2sass.herokuapp.com/) to do so with our given css. I was able to learn the better layout of sass in a scss file. Replaced my scss with this file and tested to make sure worked as before. Continuing from this point with edits to the sass first. Nothing fancy, just getting used to it and keeping the css generation via gulp.  |
 | 3. .eslintrc | a. Research deprecation of this file and which of the several that can be used in it's stead. b. See https://eslint.org/docs/user-guide/configuring#using-configuration-files-1 |
 | 4. cross platform dev | a. in order to develop on Ubuntu 16.04LTS and MacOS, i replicated our .bashrc terminal setup for bash shell; also, learned mvn to manage node and npm; successfully made changes between the two including command line linting to google standards, sass generation of css, and browser sync for live editing and testing especially of service worker; for NVM see [how to manage node js sudo free](https://www.nearform.com/blog/how-to-manage-node-js-sudo-free-with-nvm/) found after MUCH research and trial and error.<br>b. One's dev environment should be as similar to production as possible; locally, I work in http and in production, work is hosted on github pages using https. TODO: in the future setup local to have https as well.<br>C. GitHub pages root directory is NOT the repo name, so we needed to create a solution to manage the links with a 'RR$.Enums.DEV_PROD_PREFIX' based on true false for in production status variable. This is working locallay in both Mac and Linux. Will test on ghPages.<br>D. Chromebooks: used [crouton](https://github.com/dnschneid/crouton) to create 'chroot' (**Chromium OS Universal Chroot Environment**) with xenial Ubuntu for our linux dev stack same as our macOS stack. :) This works smashingly well! The chromebook remains fully functional and gets updates without the need for a dual boot solution. In future, a chromebook that supports linux apps should make this unnecessary as it is less secure without OS verification. However, low cost and stable. |
-| 5. Global objects | a. As seen in article [Variables and scoping in ECMAScript 6
-](http://2ality.com/2015/02/es6-scoping.html), I learned the subtles on global objects specifically. b. Going to use const for my  immutable namespace objects and let otherwise. While we were given the rule earlier, I hadn't realized why until I was playing around with namespace for environment variable. Learning also that service workers are in separate space than window global object. Interesting. TODO: map out in a diagram the memory environment of a web app. |
-| 6. TODO | a. TODO b. TODO |
-| . TODO | a. TODO b. TODO |
+| 5. Global objects | a. As seen in article [Variables and scoping in ECMAScript 6](http://2ality.com/2015/02/es6-scoping.html), I learned the subtleties on global objects specifically. b. Going to use const for my  immutable namespace objects and let otherwise. While we were given the rule earlier, I hadn't realized why until I was playing around with namespace for environment variable. Learning also that service workers are in a separate space than window global object, separate also from let and const. Interesting. TODO: map out in a diagram the memory environment of a web app. |
+| 6. a11y tabIndex vs tabindex | a. html attribute tabindex is well documented, but noticed a 'tabIndex' was interferring with the restaurant detail page b. Used that for the reviews listing to solve the problem. TODO: research why. |
 
 ## Assumptions required to solve the problem
 The following assumptions were made by evaluating the code and all given instructions:
@@ -46,7 +47,7 @@ I read [This to learn configuration of eslint](https://eslint.org/docs/user-guid
 I watched [Project 1 MWS Webinar with Doug Brown](https://www.youtube.com/watch?v=92dtrNU1GQc).
 I watched the following video and reviewed the following site and article for the page caching approach as follows:  
 [Service worker component fundamentals by Google](https://developers.google.com/web/fundamentals/primers/service-workers/), [TraversyMedia's approach](https://www.youtube.com/watch?v=ksXwaWHCW6k), and [Matthew Cranford's restaurant reviews app](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/).  
-Also, [M.C.'s review on accessiblity for this project]().  
+Also, [Restaurant Reviews App Walkthrough Part 3 – Accessibility, M. Cranford](https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-3-accessibility/).  
 
 
 # Udacity README.md from starter code (google maps branch)  

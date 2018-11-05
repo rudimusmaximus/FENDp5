@@ -125,16 +125,19 @@ let fillRestaurantHoursHTML = (operatingHours = self
 let fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
+  title.tabIndex='0';
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
   if (!reviews) {
     const noReviews = document.createElement('p');
+    noReviews.tabIndex='0';
     noReviews.innerHTML = 'No reviews yet!';
     container.appendChild(noReviews);
     return;
   }
-  const ul = document.getElementById('reviews-list');
+  const ul = document.createElement('ul');
+  ul.id='reviews-list';
   reviews.forEach((review) => {
     ul.appendChild(createReviewHTML(review));
   });
@@ -148,19 +151,25 @@ let fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 let createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.tabIndex='0';
+
   const name = document.createElement('p');
+  name.tabIndex='0';
   name.innerHTML = review.name;
   li.appendChild(name);
 
   const date = document.createElement('p');
+  date.tabIndex='0';
   date.innerHTML = review.date;
   li.appendChild(date);
 
   const rating = document.createElement('p');
+  rating.tabIndex='0';
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
+  comments.tabIndex='0';
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
