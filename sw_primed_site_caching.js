@@ -79,8 +79,8 @@ self.addEventListener('fetch', (e) => {
                     cache.put(e.request, clonedResponse)
                         .catch((error) => {
                           console.log('Error caching novel clone via put.');
-                          // console.error(error,
-                          // ' for this request ', e.request);
+                          console.error(error,
+                              ' for this request ', e.request);
                         });
 
                     // console.log('Cloned and cached novel response.');
