@@ -1,6 +1,6 @@
 {
   "name": "FENDp5",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "**Static to responsive & accessible**   An Udacity FEND Nanodegree repository. Restaurant Reviews App-Stage 1. In this real world case study, given the front end code for a static Restaurant Reviews App, revise the site to be responsive and achieve accessibility standards.",
   "main": "index.js",
   "scripts": {
@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/rudimusmaximus/FENDp5#readme",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-google": "^0.10.0",
+    "eslint": "^6.6.0",
+    "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0"
+    "gulp-autoprefixer": "^7.0.1"
   },
   "dependencies": {
-    "browser-sync": "^2.26.5",
-    "gulp-eslint": "^5.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp-eslint": "^6.0.0",
     "gulp-sass": "^4.0.2"
   }
 }
